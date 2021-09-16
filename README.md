@@ -9,6 +9,13 @@ Robot uses odometry and laser scan data to localize itself
 using adaptive monte carlo localization (AMCL), 
 finds route to the goal and navigates with Dijkstra's algorithm
 
+Home Service robot is simulated in a Gazebo world and it uses the [turtlebot_gazebo](https://wiki.ros.org/turtlebot_gazebo) package for simulation
+Map for the navigation is created using [pgm_map_creator](https://github.com/udacity/pgm_map_creator). Using the odometry and laser scan data robot localizes itself
+using adaptive monte carlo localization [AMCL](http://wiki.ros.org/amcl) package and constructs the route to the goal using Dijkstra's algorithm.
+It is possible to control the robot manually using [teleop_twist_keyboard](http://wiki.ros.org/teleop_twist_keyboard) package. pick_objects package
+uses [move_base](http://wiki.ros.org/move_base) to move the robot to its goal. add_marker package adds a visual marker to simulate a package in rviz configured under the 
+[turtlebot_rviz_launchers](http://wiki.ros.org/turtlebot_rviz_launchers) package.
+
 ## Prerequisites
 1. ROS (Kinetic) with Gazebo
 2. Install xterm `sudo apt-get install xterm`
