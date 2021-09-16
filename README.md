@@ -5,11 +5,7 @@ go to the pickup zone, pick up the green cube, and drop off
 at the dropoff zone.
 
 ## How it works
-Robot uses odometry and laser scan data to localize itself
-using adaptive monte carlo localization (AMCL), 
-finds route to the goal and navigates with Dijkstra's algorithm
-
-Home Service robot is simulated in a Gazebo world and it uses the [turtlebot_gazebo](https://wiki.ros.org/turtlebot_gazebo) package for simulation
+Home Service robot is simulated in a Gazebo world and it uses the [turtlebot_gazebo](https://wiki.ros.org/turtlebot_gazebo) package for simulation.
 Map for the navigation is created using [pgm_map_creator](https://github.com/udacity/pgm_map_creator). Using the odometry and laser scan data robot localizes itself
 using adaptive monte carlo localization [AMCL](http://wiki.ros.org/amcl) package and constructs the route to the goal using Dijkstra's algorithm.
 It is possible to control the robot manually using [teleop_twist_keyboard](http://wiki.ros.org/teleop_twist_keyboard) package. pick_objects package
